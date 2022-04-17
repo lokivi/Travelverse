@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+      h2,p{
+       padding-left: 100px;
+     }
+     
+      body{
+        background-color: palegreen;
+      }
+      
+      .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+        
+  .dropbtn {
+  background-color: black;
+  color: white;
+  padding: 7px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+     
+
+    </style>
+  </head>
+  <body>
+    <h2>Live Tracking </h2>
+    <p>Track your current location using the special key in your ticket</p>
+    <div class="modal-body row">
+      <div class="col-md-6">
+        <p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.4206398783513!2d80.14901191434986!3d13.324089990625325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527f0ddef76d17%3A0x61ce593720f3684b!2sRMK%20College%20of%20Engineering%20and%20Technology%20(RMKCET)!5e0!3m2!1sen!2sin!4v1631860861573!5m2!1sen!2sin"
+            width="700"
+            height="500"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </p>
+      </div>
+
+      <div class="col-md-6 select-form">
+        <h3 class="kadavuley" >Select :</h3>
+        <div id="select" class="select-content" >
+          <form name="form1"  id="form1" action="/action_page.php">
+            Ticket Number :    
+            <input type="text" name="firstname" placeholder= "Ticket Number" size="15" >   
+            <br /><br />
+            Special ID  :  
+            <input type="password" name="firstname" placeholder= "xxxxx xxxxx" size="10" />   
+            <br /><br />
+            Transport Type:
+            <select name="chapter" id="chapter">
+              <option value="" selected="selected">Vehicle</option>
+            </select>
+            <br /><br />
+            <input type="submit" href="#" value="TRACK" />
+          </form>
+        </div>
+      </div>
+
+    </div>
+    
+
+    <div class="dropdown">
+      <div  class="dropbtn" style="margin: 0px 0px 0px 110px;"> 
+          <button onclick="myFunction()" class="dropbtn">Location!</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+         
+          </div> 
+      
+    </div>
+
+     <script>
+      confirm("Allow Gps for better navigation");
+      function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script> 
+
+    
+    
+  </body>
+</html>
